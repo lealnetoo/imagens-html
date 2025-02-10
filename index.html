@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens no HTML</title>
+</head>
+<body>
+    <h1>Imagens no HTML</h1>
+    <hr>
+    <p>No início a Web era somente texto, e era tedioso. Felizmente, não demorou muito para que a capacidade de incorporar imagens (e outros tipos de conteúdo mais interessantes) dentro das páginas da web fosse adicionada. Existem outros tipo de mídia para se considerar, mas é lógico começar com o humilde elemento <code>&lt;img&gt;</code>, usado para inserir uma simples imagem em uma página web. Neste artigo, analisaremos como dominar seu uso, incluindo o básico, anotando-o com legendas usando o elemento <code>&lt;figure&gt;</code>.</p>
+
+    <ul>
+        <li><a href="#como-colocar">Como colocamos uma imagem numa página web?</a></li>
+        <li><a href="#texto-alternativo">Texto alternativo
+        </a></li>
+        <li><a href="#largura-altura">Largura e altura</a>
+        </li>
+        <li><a href="#titulos-de-imagem">Títulos de imagem
+        </a></li>
+        <li><a href="#figure">Anotar imagens com figuras e legendas de figuras</a></li>
+    </ul>
+    
+    <h2 id="como-colocar">Como colocamos uma imagem numa página web?</h2>
+    
+    <p>Para colocar uma imagem numa página web, você precisa usar o elemento <code>&lt;img&gt;</code>. Este é um elemento vazio, o que significa que ele não tem um elemento de fechamento, e você não deve colocar nada entre o elemento de abertura e fechamento. Ele requer apenas um atributo, <code>src</code>, que informa ao navegador onde ele pode encontrar a imagem que você deseja exibir. O valor do atributo <code>src</code> é o URL da imagem que você deseja exibir. Por exemplo, se você tiver uma imagem chamada <code>meu-gato.jpg</code> em um diretório chamado <code>imagens</code> em seu site, você poderia usar o seguinte código HTML para exibir a imagem:</p>
+    <p>Por exemplo, se sua imagem for chamada dinossauro.jpg, e está no mesmo diretório de sua página HTML, você poderia inserir a imagem assim:</p>
+    <pre><code>&lt;img src="dinossauro.jpg" /&gt;</code></pre>
+
+    <p>Se a imagem estiver em um diretório diferente, você precisará especificar o caminho para a imagem em relação ao arquivo HTML. Por exemplo, se a imagem estiver em um diretório chamado <code>imagens</code> que está no mesmo diretório que o arquivo HTML, você poderia usar o seguinte código HTML:</p>
+
+    <pre><code>&lt;img src="imagens/dinossauro.jpg" /&gt;</code></pre>
+    <p>E assim por diante.</p>
+    <p>Você pode incorporar a imagem usando seu URL absoluto, por exemplo:</p>
+    
+    <pre><code>&lt;img src="https://www.example.com/imagens/dinossauro.jpg" /&gt;</code></pre>
+
+    <h2 id="texto-alternativo">Texto alternativo</h2>
+
+    <p>É uma boa prática adicionar um atributo <code>alt</code> ao seu elemento <code>&lt;img&gt;</code>. O texto alternativo é o texto que é exibido se a imagem não puder ser exibida. Isso pode ser porque o arquivo da imagem está faltando, porque o URL é digitado incorretamente, ou porque o usuário está usando um leitor de tela para navegar na página. O texto alternativo é importante para ajudar os usuários com deficiência visual a entender o conteúdo da imagem.</p>
+
+    <p>Por exemplo, se você tiver uma imagem de um dinossauro, você poderia adicionar o texto alternativo "Dinossauro" assim:</p>
+
+    <pre><code>&lt;img src="dinossauro.jpg" alt="Dinossauro" /&gt;</code></pre>
+
+    <h2 id="largura-altura">Largura e altura</h2>
+
+    <p>Se você quiser especificar a largura e a altura da imagem, você pode fazer isso usando os atributos <code>width</code> e <code>height</code>. Por exemplo, se você quiser exibir uma imagem de 200 pixels de largura e 100 pixels de altura, você poderia usar o seguinte código HTML:</p>
+
+    <pre><code>&lt;img src="dinossauro.jpg" alt="Dinossauro" width="200" height="100" /&gt;</code></pre>
+
+    <p>É uma boa prática especificar a largura e a altura da imagem, pois isso permite que o navegador reserve espaço para a imagem enquanto ela é carregada, evitando que o conteúdo da página salte para cima e para baixo enquanto a imagem é carregada.</p>
+
+    <h2 id="titulos-de-imagem">Títulos de imagem</h2>
+
+    <p>Se você quiser adicionar um título à sua imagem, você pode fazer isso usando o atributo <code>title</code>. O título é exibido quando o usuário passa o mouse sobre a imagem. Por exemplo, se você quiser adicionar um título "Dinossauro" à sua imagem, você poderia usar o seguinte código HTML:</p>
+
+    <pre><code>&lt;img src="dinossauro.jpg" alt="Dinossauro" title="Dinossauro" /&gt;</code></pre>
+
+    <p>É uma boa prática adicionar títulos às suas imagens, pois isso ajuda os usuários a entender o conteúdo da imagem e o contexto em que ela está sendo usada.</p>
+
+    <h2 id="figure">Anotar imagens com figuras e legendas de figuras</h2>
+
+    <p>Se você quiser adicionar uma legenda à sua imagem, você pode fazer isso usando o elemento <code>&lt;figure&gt;</code>. O elemento <code>&lt;figure&gt;</code> é usado para envolver uma imagem e sua legenda, e o elemento <code>&lt;figcaption&gt;</code> é usado para adicionar a legenda. Por exemplo, se você quiser adicionar uma legenda "Dinossauro" à sua imagem, você poderia usar o seguinte código HTML:</p>
+
+    <pre><code>&lt;figure&gt;
+    &lt;img src="dinossauro.jpg" alt="Dinossauro" /&gt;
+    &lt;figcaption&gt;Dinossauro&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+    
+        <p>É uma boa prática adicionar legendas às suas imagens, pois isso ajuda os usuários a entender o conteúdo da imagem e o contexto em que ela está sendo usada.</p>
+    
+        <h2>Conclusão</h2>
+    
+        <p>Adicionar imagens a uma página web é uma maneira poderosa de tornar o conteúdo mais interessante e envolvente. O elemento <code>&lt;img&gt;</code> é a maneira mais simples de adicionar uma imagem a uma página web, e você pode personalizar a aparência e o comportamento da imagem usando os atributos <code>src</code>, <code>alt</code>, <code>width</code>, <code>height</code> e <code>title</code>. Você também pode adicionar legendas às suas imagens usando o elemento <code>&lt;figure&gt;</code> e o elemento <code>&lt;figcaption&gt;</code>. Esperamos que este artigo tenha ajudado você a entender como adicionar imagens a uma página web e a usar as melhores práticas para tornar suas imagens acessíveis e envolventes.</p>
+        <hr>
+        <p>Fonte: <a href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">MDN Web Docs</a></p>
+        <hr>
+        <p>Outros links:</p>
+        <ul>
+            <li><a href="https://www.w3schools.com/html/html_images.asp">W3Schools</a></li>
+            <li><a href="https://www.w3.org/WAI/tutorials/images/">W3C</a></li>
+        </ul>
+        <hr>
+        
+        <footer>Desenvolvido por José Leal</footer>
+
+
+    
+</body>
+</html>
